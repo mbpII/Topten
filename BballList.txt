@@ -15,5 +15,7 @@ how to store the image is to be figured out
 mj description 
 Michael Jordan, born February 17, 1963, is a former professional basketball player, businessperson, and owner/chairman of the Charlotte Hornets and 23XI Racing. He played 15 seasons in the NBA, winning 6 championships with the Chicago Bulls. Jordan is widely considered the greatest basketball player of all time. He was a college player with the North Carolina Tar Heels and won the national championship as a freshman. Jordan was a 5-time MVP, 10-time scoring champion, and holds multiple NBA records. He has been inducted into the Naismith Memorial Basketball Hall of Fame twice and was named to the NBA 75th Anniversary Team in 2021. Jordan is also known for his product endorsements, Nike's Air Jordan sneakers, and starring in the film Space Jam and the documentary series The Last Dance. His net worth as of 2023 is estimated at $1.7 billion.
 
+I am currently, looking into what sql or no sql database that I am going to use in order to store the values of the basketball player.
 
-TDC Need to figure out / Ask Sage what my config is so that i can connect the project that I have created.
+going to recreate this prodject using the most in demand web technologies because webpack , among other things is giving me alot 
+of resistance to not want to do this stuff
