@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "mongodb": "5.1",
+    "mongoose": "^7.0.1",
     "mssql": "^9.1.1",
-    "pg": "^8.9.0"
+    "pg": "^8.10.0"
   }
 }
