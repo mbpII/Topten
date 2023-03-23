@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <title>Basketball Top10</title>
-  <script src="client.js"></script>
   <body>
     <header>
       <h1>Top Ten Basketball Players</h1>
@@ -18,7 +17,15 @@
         <p>description of player number one </p>
         <img src="##" alt="Image of player number one">
         <script>
-          //print cookie
+          // Make a GET request to the server and display the response
+          fetch('http://localhost:3000/')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('bgr').textContent = data;
+            })
+            .catch(error => {
+              console.error('Error fetching data:', error);
+            });
         </script>
       </div>
       <!-- repeat the above section code for players 3 through 10 -->

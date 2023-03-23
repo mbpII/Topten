@@ -1,40 +1,21 @@
-const express = require("express");
-const { Client } = require("pg");
+const http = require("http");
 
-const app = express();
+const hostname = "127.0.0.1";
+const port = 3000;
 
-const client = new Client({
-  user: "mbpii",
-  host: "localhost",
-  database: "basketball",
-  password: "1211",
-  port: 5432, // or the port number of your PostgreSQL server
+let bgr = "yo dj";
+
+const server = http.createServer((req, res) => {
+  // Set the Access-Control-Allow-Origin header to allow requests from http://localhost:5500
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5500");
+
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/plain");
+  res.end(bgr);
 });
 
-app.get("/players", (req, res) => {
-  client.connect((err) => {
-    if (err) {
-      console.error("Error connecting to the PostgreSQL server", err.stack);
-      res.status(500).send("Error connecting to the PostgreSQL server");
-    } else {
-      console.log("Connected to PostgreSQL server");
-
-      // run a query
-      client.query("SELECT * FROM players", (err, result) => {
-        if (err) {
-          console.error("Error running query", err.stack);
-          res.status(500).send("Error running query");
-        } else {
-          console.log("Query result:", result.rows);
-          res.json(result.rows); // send the result as a JSON response
-        }
-        // close the connection
-        client.end();
-      });
-    }
-  });
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
 
-app.listen(3000, () => {
-  console.log("Server listening on port 3000");
-});
+// continue reading the node.js documentation and find how to get the connection into the res.end string
